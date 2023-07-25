@@ -1,0 +1,559 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Amiri", Calibri, "Trebuchet MS", sans-serif;
+    color: #e1e8ed;
+    background-color: rgb(18, 32, 46);
+    --header-height: 100px;
+    padding-top: var(--header-height);
+}
+
+a {
+    text-decoration: none;
+    color: #f4abba;
+    font-size: 350%;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+    height: var(--header-height);
+    top: 0;
+}
+
+h1 {
+    color: rgb(161, 12, 86);
+    font-size: clamp(3rem, 3vw, 5rem);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+nav {
+    align-items: center;
+}
+
+#nav-bar li {
+    font-size: clamp(0.5rem, 1vw, 0.8rem);
+    display: inline;
+    padding: 15px;
+    font-style: italic;
+    line-height: 0.5;
+}
+
+#header-img {
+    height: 8rem;
+    margin-top: -5px;
+    padding-right: 3px;
+}
+
+.divider-header {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px #ffac33;
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    width: 100%;
+}
+
+.divider-main {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        #00000000,
+        #f4abba59,
+        #f4abba,
+        #f4abba59,
+        #00000000
+    );
+    margin: 30px auto;
+}
+
+.intro-grid {
+    width: min(95vw, 1600px);
+    max-height: 550px;
+    margin-top: clamp(40px, 8vw, 130px);
+    margin-bottom: clamp(40px, 8vw, 130px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5vw 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr 1.1fr;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    align-items: center;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 5rem);
+}
+
+.modern {
+    font-family: "Lakki Reddy", serif;
+    color: #dd2e44;
+    line-height: 1.2;
+}
+
+.and {
+    font-family: "Festive", serif;
+    color: #e1e8ed;
+    line-height: 0.5;
+}
+
+.antique {
+    font-family: "Berkshire Swash", sans-serif;
+    color: #ffd983;
+}
+
+.highlighted {
+    display: block;
+    font-size: clamp(3rem, 7vw, 9rem);
+    line-height: clamp(20px, 1.2, 120px);
+}
+
+.modern .highlighted {
+    text-shadow: -1.5px 1.5px 2px #faa8caa9;
+}
+
+.antique .highlighted {
+    text-shadow: 0.5px 3px 3px #ffb300b7;
+}
+
+#left-text {
+    justify-self: stretch;
+    align-self: end;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+}
+
+#middle-text {
+    justify-self: center;
+    align-self: start;
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+}
+
+#right-text {
+    justify-self: left;
+    grid-row: 3 / 3;
+    grid-column: 3 / -1;
+}
+
+#below-text {
+    align-self: end;
+    justify-self: center stretch;
+    grid-row: 4 / 4;
+    grid-column: 1 / -1;
+}
+
+h3 {
+    text-align: center;
+    font-style: italic;
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
+}
+
+.wave-holder {
+    width: 100%;
+}
+
+.wave {
+    height: 4px;
+    width: 100%;
+}
+
+.wave1 {
+    background: linear-gradient(
+        45deg,
+        transparent,
+        transparent 45%,
+        #f4abba 50%,
+        transparent 55%
+    );
+}
+.wave2 {
+    background: linear-gradient(
+        -45deg,
+        transparent,
+        transparent 45%,
+        #f4abba 50%,
+        transparent 55%
+    );
+}
+
+.wave {
+    background-size: 8px 8px;
+}
+
+.info {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 10vh;
+    margin-top: -10vh;
+    display: grid;
+    grid-template-columns: 9vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: max(3.5vw, 20px);
+    align-items: center;
+    justify-items: center;
+}
+
+#icon1 {
+    font-size: clamp(40px, 6.2vw, 85px);
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+#icon2 {
+    width: clamp(40px, 6.2vw, 85px);
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+}
+
+#icon3 {
+    width: 6.2vw;
+    font-size: clamp(35px, 6.5vw, 80px);
+    grid-row: 3 / 3;
+    grid-column: 1 / 1;
+}
+
+.icon-text {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+#text1 {
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+}
+
+#text2 {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+}
+
+#text3 {
+    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+}
+
+.video {
+    text-align: center;
+    margin: auto 7.5vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.description {
+    padding-top: 0vh;
+    padding-bottom: 2vh;
+    font-style: italic;
+    font-size: clamp(2rem, 2.5vw, 4.5rem);
+    justify-self: flex-start;
+    color: #f4abba;
+}
+
+iframe {
+    margin: 0 auto;
+    flex-basis: 100%;
+}
+
+.cakes {
+    text-align: center;
+    margin: auto 7.5vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+}
+
+.gallery-item {
+    padding: 1rem;
+    font-size: 2vw;
+    text-align: center;
+    background-color: black;
+    scroll-snap-align: center;
+}
+
+.gallery-item img {
+    float: left;
+    width: clamp(150px, 20vw, 350px);
+    height: clamp(150px, 20vw, 400px);
+    object-fit: cover;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.gallery-item figcaption {
+    font-size: clamp(2rem, 2.5vw, 4.5rem);
+}
+
+.gallery-item.modern img {
+    margin-bottom: 10px;
+}
+
+.forms {
+    margin: clamp(50px, 7vw, 130px) 7.5vw;
+    text-align: center;
+}
+
+h4 {
+    font-size: clamp(2rem, 3.5vw, 5rem);
+    margin: 0 auto;
+    padding-bottom: clamp(50px, 8vw, 130px);
+    width: 70vw;
+}
+
+.fake-cake {
+    width: 50vw;
+    height: 30vw;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    margin: 0 auto;
+}
+
+.icing {
+    background-color: #ffd983;
+    border: 0;
+}
+
+.top {
+    background-color: #ffd983;
+    height: 30%;
+    width: 100%;
+    top: 0;
+    position: relative;
+    border: 0;
+    border-top: 10px solid #ffd983;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+#drop1 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    left: 1%;
+    top: -10%;
+}
+
+#drop2 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    right: 1%;
+    top: -10%;
+}
+
+#drop3 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    left: 19%;
+    top: -40%;
+}
+
+#drop4 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    right: 19%;
+    top: -40%;
+}
+
+#drop5 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    left: 37%;
+    top: -55%;
+}
+
+#drop6 {
+    color: rgb(255, 255, 254);
+    font-size: 6vw;
+    position: absolute;
+    right: 37%;
+    top: -55%;
+}
+
+.top-cream {
+    height: 15%;
+    background-color: #ffd983;
+    border: 0;
+}
+
+/* https://css-tricks.com/snippets/svg/curved-text-along-path/ */
+
+.icing.top svg {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
+    height: 200%;
+}
+
+.icing.top text {
+    font-size: 270%;
+    font-family: "Pacifico", serif;
+    fill: rgb(87, 41, 11);
+}
+
+.fake-cake .right {
+    width: 3%;
+    height: 95%;
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    right: -2%;
+    border-top-right-radius: 80%;
+    border: 0;
+}
+
+.fake-cake .left {
+    width: 3%;
+    height: 95%;
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    left: -2%;
+    border-top-left-radius: 80%;
+    border: 0;
+}
+
+/*
+    https://css-generators.com/wavy-shapes/
+
+    var p = height*size;
+    var r = (Math.sqrt(p*p + size*size)).toFixed(2);
+
+    radial-gradient(${r}${unit_size} at 50% ${(1*size + p).toFixed(2)}${unit_size},#000 99%,#0000 101%) calc(50% - ${2*size}${unit_size}) 0/${4*size}${unit_size} 100%,
+    radial-gradient(${r}${unit_size} at 50% ${-1*p.toFixed(2)}${unit_size},#0000 99%,#000 101%) 50% ${size}${unit_size}/${4*size}${unit_size} 100% repeat-x`
+*/
+
+.wavy-layer-one {
+    height: 100%;
+    background: #f4abba;
+    --mask: radial-gradient(3.2vw at 50% 4.5vw, #000 99%, #0000 101%)
+            calc(50% - 4vw) 0/8vw 100%,
+        radial-gradient(3.2vw at 50% -2.5vw, #0000 99%, #000 101%) 50% 2vw/8vw
+            100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    mask: var(--mask);
+    mask: var(--mask);
+}
+
+#middle-layer {
+    height: 20%;
+    background-color: #f4abba;
+    border: 0;
+}
+
+#email {
+    background-color: rgb(255, 255, 254);
+    font-style: italic;
+    margin: 0 auto;
+    text-align: center;
+    width: max(180px, 35vw);
+    font-size: max(1.5vw, 0.9rem);
+    padding: 2%;
+    border: 5px solid #61400f;
+}
+
+#zwischenboden {
+    height: 3%;
+    background-color: rgb(214, 130, 3);
+    border: 0;
+}
+
+.middle-cream {
+    height: 15%;
+    background-color: #ffd983;
+    border: 0;
+}
+
+.wavy-layer-two {
+    height: 100%;
+    background: #61400f;
+    --mask: radial-gradient(1.6vw at 50% 2.25vw, #000 99%, #0000 101%)
+            calc(50% - 2vw) 0/4vw 100%,
+        radial-gradient(1.6vw at 50% -1.25vw, #0000 99%, #000 101%) 50% 1vw/4vw
+            100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    border: 0;
+}
+
+#bottom-layer {
+    height: 20%;
+    background-color: #61400f;
+    border: 0;
+}
+
+#submit {
+    color: #dd2e44;
+    background-color: #f4abba;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    font-family: "Chango", sans-serif;
+    font-size: max(2vw, 0.9rem);
+    font-stretch: expanded;
+    margin: auto auto;
+    border: 5px solid #dd2e44;
+    border-radius: 30%;
+}
+
+#boden {
+    height: 5%;
+    background-color: rgb(214, 130, 3);
+    border: 0;
+}
+
+@media (max-width: 1050px) {
+    header {
+        flex-direction: column;
+        gap: 3vh;
+    }
+    body {
+        --header-height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    #email {
+        border: 3px solid #61400f;
+    }
+    #submit {
+        border: 3px solid #dd2e44;
+    }
+}
